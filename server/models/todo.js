@@ -4,7 +4,8 @@ var Todo = mongoose.model('Todo',{
   text:{
     type: String,
     required: true,
-    trim: true
+    trim: true,
+    minlength: 1
     // required: [true, 'Why no text?']
   },
   completed:{
@@ -12,7 +13,8 @@ var Todo = mongoose.model('Todo',{
     default: false
   },
   completedAt:{
-    type: Number
+    type: Number,
+    default:null
   }
 });
 
